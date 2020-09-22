@@ -1,0 +1,64 @@
+body{font-family: 'Roboto-Regular';background:rgb(248, 249, 250) !important;}
+header .navbar{margin: -1.4rem 0rem;}
+header nav.navbar .navbar-brand{color:#fff;}
+header nav.navbar .navbar-brand{font-size: 25px;}
+header nav.navbar .navbar-brand{font-family: 'Open Sans', sans-serif;}
+
+header nav.navbar .btn{border-radius: 20px; 
+    background-color: white; 
+    color: rgb(65, 50, 121);
+    width: 250px; height: 40px;
+    font-family: 'Open Sans', sans-serif;        
+    font-size: 20px;
+    letter-spacing: -1px;
+    padding-bottom: 20px;
+    border: none;
+    transition: 0.8s;
+    outline: none;
+}
+
+header nav.navbar .btn:hover {
+    color: white; 
+    background-color: rgb(118, 149, 204) !important; 
+    border:none !important;
+    outline: none;
+}
+
+#titulo {
+    padding-bottom: 20px;
+}
+
+.content-inner {
+    width: 100%;
+    float: left;
+    padding: 40px;
+    box-shadow: 0px 0px 10px #c1c1c1;
+    background: #fff;
+}
+table tr td button {
+    background: no-repeat;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none !important;
+    border: none !important;
+    text-align: center;
+}
+
+
+.completed{text-decoration: line-through;}
+
+
+tr:active {
+    background-color: rgb(95, 173, 98) !important;
+    color: white;
+}
+
+
+#colorheader {
+    background-color: rgb(65, 50, 121) !important;
+}
+
+td,th, thead, tbody {
+    text-align: center !important;
+}

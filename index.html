@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD - Polen</title>
+  <link rel="icon" type="image/png" href="icone.png" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;700&display=swap" rel="stylesheet">    
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+  <header class="bg-dark mb-3" id="colorheader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <nav class="navbar justify-content-between">
+            <a class="navbar-brand" href="#">
+              <img src="logo.svg" width="110" height="110" class="d-inline-block align-top" alt="">
+            </a>
+            <form class="form-inline">
+              <button type="button" id="botao" class="btn btn-secondary" data-toggle="modal" data-target="#myModal"><b>ADICIONAR NOVA ONG</b></button>
+            </form>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-8">
+          <div class="content-inner">
+                          <h1 id="titulo">Estas são as Ongs do Polen</h1>
+            <div class="to-do-output">
+
+              <table class="table table-striped" id="tblOngs">    
+               
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+    
+          <div class="modal-content">
+              <div class="modal-header">
+                <h1 >Cadastre-se</h1>
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                    <form>
+                      <div class="remember">
+                      <div class="form-group">
+                        <label for="exampleInputUser">Nome</label>
+                        <input type="text" class="form-control" placeholder="Digite o nome da sua Ong" id="nameinput" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputUser">Slogan</label>
+                        <input type="text" class="form-control" placeholder="Digite o slogan" id="sloganinput" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputUser">Link</label>
+                        <input type="text" class="form-control" placeholder="Digite o link do seu website" id="linkinput" />
+                      </div>
+                      <div class="form-group">
+                        <input type="hidden" id="saveindex">
+                      </div>
+                    </div>
+                        <button type="button" class="btn btn-success mr-sm-2" id="saveBtn" style="display: none;">Salvar</button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-success mr-sm-2" id="btnAdicionar" data-dismiss="modal">Adicionar</button>
+
+                        </div>
+                      </form>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+
+       
+      <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+    
+          <div class="modal-content">
+              <div class="modal-header">
+                <h1>Editar</h1>
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                    <form>
+                      <div class="remember">
+                      <div class="form-group">
+                        <label for="exampleInputUser">Nome</label>
+                        <input type="text" class="form-control" placeholder="Digite o nome da sua Ong" id="nameinput2" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputUser">Slogan</label>
+                        <input type="text" class="form-control" placeholder="Digite o slogan" id="sloganinput2" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputUser">Link</label>
+                        <input type="text" class="form-control" placeholder="Digite o link do seu website" id="linkinput2" />
+                      </div>
+                      <div class="form-group">
+                        <input type="hidden" id="saveindex2">
+                      </div>
+                    </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-success mr-sm-2" id="saveBtn2" data-dismiss="modal">Salvar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-success mr-sm-2" id="editBtn" style="display: none;">Adicionar</button>
+
+                        </div>
+                      </form>
+                </div>
+              </div>
+            
+            </div>
+          </div>   
+
+
+  <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+
+</html>
